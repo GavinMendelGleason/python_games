@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from random import randint
+from re import match
 
 CHAR_STATS = {
     'mage' : {
@@ -68,4 +69,19 @@ def main():
     print(f"Welcome, {name}")
     cls_name=class_name(cls)
     print(f"Welcome to the guild of {cls_name}s")
-    
+    if class_name=="mage":
+        spell=None
+        while spell==None:
+            print("What spells would you like? (Choose 2 numbers seperated by commas)")
+            print("1. Fireball 2. Freeze 3. Heal 4. Bless 5. Hide")
+            spell=input()
+            r = match("(\d)+(,|\s)(\d)+", spell)
+            spell1=r[1]
+            spell2=r[3]
+            validspells=["1","2","3","4","5"]
+            if spell1 in validspells and spell2 in validspells:
+                pass
+            else:
+                spell=None
+                print("That is not a valid spell, please pick two valiid spells")
+                
