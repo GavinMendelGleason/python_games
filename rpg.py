@@ -75,6 +75,59 @@ def class_name(class_number):
     else:
         raise ValueError("Unknown class number")
 
+def selectspells(cls_name):
+    if cls_name=="mage", "rogue":
+    spell_number=None
+    if cls_name=="mage"
+        while spell_number==None:
+            print("What spells would you like? (Choose 2 numbers seperated by commas)")
+            print("1. Fireball 2. Freeze 3. Heal 4. Bless 5. Hide")
+            spell_number=input()
+            r = match("(\d)+(,|\s)(\d)+", spell)
+            spell1=r[1]
+            spell2=r[3]
+            validspells=["1","2","3","4","5"]
+            if spell1 in validspells and spell2 in validspells:
+                pass
+            else:
+                spell_number=None
+                print("That is not a valid spell, please pick two valid spells")
+    if cls_name=="rogue"
+        while spell_number==None:
+            print("What spells would you like? (Choose 1 number)")
+            print("1. Hide 2. Cloak 3. Identify")
+            spell_number=input()
+            validspells=["1","2","3"]
+            if spell_number in validspells:
+                pass
+            else:
+                spell_number=None
+                print("That is not a valid spell, please pick one valid spell")
+
+def spell_name(spell_number):
+    if cls_name=="mage"
+        if spell_number=="1":
+            return "Fireball"
+        elif spell_number=="2":
+            return "Freeze"
+        elif spell_number=="3":
+            return "Heal"
+        elif spell_number=="4":
+            return "Bless"
+        elif spell_number=="5":
+            return "Hide"
+        else:
+            raise ValueError("Unknown spell number!")
+    if cls_name=="rogue"
+        if spell_number=="1":
+            return "Hide"
+        elif spell_number=="2":
+            return "Cloak"
+        elif spell_number=="3":
+            return "Identify"
+        else:
+            raise ValueError("Unknown spell number!")
+
 def selectroll(name, char_class):
     keep=None
     while keep==None:
@@ -94,18 +147,3 @@ def main():
     print(f"Welcome, {name}")
     print(f"Welcome to the guild of {cls_name}s")
     c=selectroll(name, cls_name)
-    if cls_name=="mage":
-        spell=None
-        while spell==None:
-            print("What spells would you like? (Choose 2 numbers seperated by commas)")
-            print("1. Fireball 2. Freeze 3. Heal 4. Bless 5. Hide")
-            spell=input()
-            r = match("(\d)+(,|\s)(\d)+", spell)
-            spell1=r[1]
-            spell2=r[3]
-            validspells=["1","2","3","4","5"]
-            if spell1 in validspells and spell2 in validspells:
-                pass
-            else:
-                spell=None
-                print("That is not a valid spell, please pick two valiid spells")
