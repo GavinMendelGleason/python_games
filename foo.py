@@ -69,7 +69,7 @@ def main():
     print(f"Welcome, {name}")
     cls_name=class_name(cls)
     print(f"Welcome to the guild of {cls_name}s")
-    if class_name=="mage":
+    if cls_name=="mage":
         spell=None
         while spell==None:
             print("What spells would you like? (Choose 2 numbers seperated by commas)")
@@ -84,4 +84,3 @@ def main():
             else:
                 spell=None
                 print("That is not a valid spell, please pick two valiid spells")
-                
