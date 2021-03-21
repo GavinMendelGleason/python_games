@@ -76,7 +76,6 @@ def class_name(class_number):
         raise ValueError("Unknown class number")
 
 def selectspells(cls_name):
-    if cls_name=="mage", "rogue":
     spell_number=None
     if cls_name=="mage"
         while spell_number==None:
@@ -103,9 +102,13 @@ def selectspells(cls_name):
             else:
                 spell_number=None
                 print("That is not a valid spell, please pick one valid spell")
+    if spell_number == None:
+        return None
+    else:
+        return spell_name(cls_name,spell_number)
 
-def spell_name(spell_number):
-    if cls_name=="mage"
+def spell_name(cls_name,spell_number):
+    if cls_name=="mage":
         if spell_number=="1":
             return "Fireball"
         elif spell_number=="2":
@@ -118,7 +121,7 @@ def spell_name(spell_number):
             return "Hide"
         else:
             raise ValueError("Unknown spell number!")
-    if cls_name=="rogue"
+    if cls_name=="rogue":
         if spell_number=="1":
             return "Hide"
         elif spell_number=="2":
